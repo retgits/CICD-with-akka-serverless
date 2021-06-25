@@ -5,9 +5,9 @@ name: Node.js CI
 
 on:
   push:
-    branches: [ main ]
+    branches: [ mkplc-action ]
   pull_request:
-    branches: [ main ]
+    branches: [ mkplc-action ]
 
 
 jobs:
@@ -23,7 +23,7 @@ jobs:
           - run: npm run build --if-present
           - run: npm test
           - name: List Services
-            uses: retgits/akkasls-action@v1
+            uses: retgits/akkasls-action@v2
             with:
               cmd: "services list"
             env:
